@@ -20,6 +20,15 @@ concurrency:
 jobs:
   ci:
     uses: bamr87/bamr87/.github/workflows/standard-ci.yml@v2
-    with:
-      test-command: "gradle --no-daemon :shared:jvmTest"
     secrets: inherit
+
+  # Stack-specific build/test (standard-ci@v2 auto-detects node/python/ruby only).
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: "17"}
+      - uses: gradle/actions/setup-gradle@v4
+      - run: 'gradle --no-daemon :shared:jvmTest'
