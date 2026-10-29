@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for fleet-mobile (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id FMOB-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/fleet-mobile
+
+features:
+  - id: FMOB-001
+    title: "Shared Kotlin module with a fleet status model and unit tests (JVM tar"
+    description: "Shared Kotlin module with a fleet status model and unit tests (JVM target)."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: infra
+    link: settings.gradle.kts
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: FMOB-002
+    title: "Gradle build of the shared module in CI"
+    description: "Gradle build of the shared module in CI."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: FMOB-003
+    title: "Ktor client fetching hub fleet data"
+    description: "Ktor client fetching hub fleet data."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: FMOB-004
+    title: "Android app shell with a repo status list"
+    description: "Android app shell with a repo status list."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: FMOB-005
+    title: "iOS target and Compose Multiplatform UI"
+    description: "iOS target and Compose Multiplatform UI."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: FMOB-006
+    title: "Notifications for failing CI and review requests"
+    description: "Notifications for failing CI and review requests."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: FMOB-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28
