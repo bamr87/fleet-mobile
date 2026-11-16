@@ -7,7 +7,7 @@ repo: bamr87/fleet-mobile
 
 features:
   - id: FMOB-001
-    title: "Shared Kotlin module with a fleet status model and unit tests (JVM tar"
+    title: "Shared Kotlin module with a fleet status model and JVM unit tests"
     description: "Shared Kotlin module with a fleet status model and unit tests (JVM target)."
     implemented: true
     status: shipped
@@ -19,11 +19,11 @@ features:
   - id: FMOB-002
     title: "Gradle build of the shared module in CI"
     description: "Gradle build of the shared module in CI."
-    implemented: false
-    status: planned
+    implemented: true
+    status: shipped
     prd: [FR2]
     surface: infra
-    docs: PRD.md
+    link: .github/workflows/ci.yml
     tags: [phase-1]
     date: 2026-10-28
   - id: FMOB-003

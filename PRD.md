@@ -58,8 +58,8 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 
 | ID | Feature | Status | Where | Requirements |
 | --- | --- | --- | --- | --- |
-| [FMOB-001](features/features.yml) | Shared Kotlin module with a fleet status model and unit tests (JVM tar | shipped | [`settings.gradle.kts`](settings.gradle.kts) | FR1 |
-| [FMOB-002](features/features.yml) | Gradle build of the shared module in CI | planned | [`PRD.md`](PRD.md) | FR2 |
+| [FMOB-001](features/features.yml) | Shared Kotlin module with a fleet status model and JVM unit tests | shipped | [`settings.gradle.kts`](settings.gradle.kts) | FR1 |
+| [FMOB-002](features/features.yml) | Gradle build of the shared module in CI | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | FR2 |
 | [FMOB-003](features/features.yml) | Ktor client fetching hub fleet data | planned | [`PRD.md`](PRD.md) | FR3 |
 | [FMOB-004](features/features.yml) | Android app shell with a repo status list | planned | [`PRD.md`](PRD.md) | FR4 |
 | [FMOB-005](features/features.yml) | iOS target and Compose Multiplatform UI | planned | [`PRD.md`](PRD.md) | FR5 |
