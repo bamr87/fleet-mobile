@@ -1,6 +1,6 @@
 # fleet-mobile
 
-> Kotlin Multiplatform app to monitor the bamr87 fleet's bots, CI and PRs from a phone.
+> fleet-mobile's direction is to become the ultimate open home for all things mobile fleet operations: data, tools, resources and transparency, with a Kotlin Multiplatform console for bot runs, CI and PRs, for everyone ([constitution](docs/constitution.md) §1).
 
 The fleet console in your pocket: shared Kotlin logic for Android and iOS showing bot runs, CI status and PRs waiting on review.
 

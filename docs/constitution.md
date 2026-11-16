@@ -6,9 +6,17 @@
 > Agents read this before [AGENTS.md](../AGENTS.md) conventions, the [PRD](../PRD.md), or the
 > [feature catalog](../features/features.yml). Ratified by merged PR; amended only per § 8.
 
-## 1. Mission
+## 1. Missions
 
-The fleet console in your pocket: shared Kotlin logic for Android and iOS showing bot runs, CI status and PRs waiting on review. It is a learning-first portfolio project in the bamr87 fleet: Mobile front end for the hub console, harness registry and fleet activity log; signs in through zer0-id.
+fleet-mobile's direction is to become the ultimate open home for all things mobile fleet operations — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, operators, mobile practitioners and the general public.** Operators, mobile developers, and the general public are first-class audiences. The aim is a shared, open commons: the same sources, the same tools, and the same trail of evidence for everyone.
+2. **Make the fleet's bot runs, CI status and PRs waiting on review visible from a phone, with shared Kotlin logic for Android and iOS.** What you see on the device should match the console, and stay auditable.
+3. **Put that console in every operator's pocket, signed in through zer0-id.** Serve it as a mobile front end for the hub console, the harness registry and the fleet activity log — an open toolkit for working with all things mobile fleet operations.
+
+These missions set the course; they do not claim the work is finished. They serve the existing constitution and PRD purpose: the fleet console in your pocket. The earlier mission paragraph is absorbed into these three. Every feature must trace to them.
+
+_Source: [../PRD.md](../PRD.md) §1.1._
 
 ## 2. Invariants (non-negotiable)
 
