@@ -1,6 +1,6 @@
 # fleet-mobile
 
-> Kotlin Multiplatform app to monitor the bamr87 fleet's bots, CI and PRs from a phone.
+> fleet-mobile's direction is to become the ultimate open home for all things mobile fleet operations: data, tools, resources and transparency, with a Kotlin Multiplatform console for bot runs, CI and PRs, for everyone ([constitution](docs/constitution.md) §1).
 
 The fleet console in your pocket: shared Kotlin logic for Android and iOS showing bot runs, CI status and PRs waiting on review.
 
@@ -25,8 +25,20 @@ Mobile front end for the hub console, harness registry and fleet activity log; s
 
 ## Quick start
 
+**Prerequisites:** JDK 17 or newer (CI uses Temurin 17) and a current Gradle on your `PATH`, installed with your package manager or [SDKMAN](https://sdkman.io/). The repo ships no Gradle wrapper and the fleet always tracks the latest release, so no Gradle version is pinned.
+
+Build the shared module and run its tests exactly as CI does:
+
 ```bash
-gradle :shared:jvmTest
+gradle --no-daemon :shared:jvmTest
+```
+
+Success ends with `BUILD SUCCESSFUL`. The HTML test report lands at `shared/build/reports/tests/jvmTest/index.html` and the JUnit XML results in `shared/build/test-results/jvmTest/`.
+
+The tests live in `shared/src/commonTest/kotlin/dev/bamr87/fleet/` and run on the JVM target, the only target so far. To run a single test class:
+
+```bash
+gradle :shared:jvmTest --tests 'dev.bamr87.fleet.FleetStatusTest'
 ```
 
 ## How it grows

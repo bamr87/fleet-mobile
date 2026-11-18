@@ -12,6 +12,17 @@ The fleet console in your pocket: shared Kotlin logic for Android and iOS showin
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
 
+
+## 1.1 Missions
+
+fleet-mobile's direction is to become the ultimate open home for all things mobile fleet operations — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, operators, mobile practitioners and the general public.** Operators, mobile developers, and the general public are first-class audiences. The aim is a shared, open commons: the same sources, the same tools, and the same trail of evidence for everyone.
+2. **Make the fleet's bot runs, CI status and PRs waiting on review visible from a phone, with shared Kotlin logic for Android and iOS.** What you see on the device should match the console, and stay auditable.
+3. **Put that console in every operator's pocket, signed in through zer0-id.** Serve it as a mobile front end for the hub console, the harness registry and the fleet activity log — an open toolkit for working with all things mobile fleet operations.
+
+These missions set the course; they do not claim the work is finished. They serve the existing constitution and PRD purpose: the fleet console in your pocket. The earlier mission paragraph is absorbed into these three. Every feature must trace to them.
+
 ## 2. Goals
 
 - Shared KMP core that reads fleet status (hub _data / GitHub API)
@@ -58,13 +69,14 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 
 | ID | Feature | Status | Where | Requirements |
 | --- | --- | --- | --- | --- |
-| [FMOB-001](features/features.yml) | Shared Kotlin module with a fleet status model and unit tests (JVM tar | shipped | [`settings.gradle.kts`](settings.gradle.kts) | FR1 |
-| [FMOB-002](features/features.yml) | Gradle build of the shared module in CI | planned | [`PRD.md`](PRD.md) | FR2 |
+| [FMOB-001](features/features.yml) | Shared Kotlin module with a fleet status model and JVM unit tests | shipped | [`settings.gradle.kts`](settings.gradle.kts) | FR1 |
+| [FMOB-002](features/features.yml) | Gradle build of the shared module in CI | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | FR2 |
 | [FMOB-003](features/features.yml) | Ktor client fetching hub fleet data | planned | [`PRD.md`](PRD.md) | FR3 |
 | [FMOB-004](features/features.yml) | Android app shell with a repo status list | planned | [`PRD.md`](PRD.md) | FR4 |
 | [FMOB-005](features/features.yml) | iOS target and Compose Multiplatform UI | planned | [`PRD.md`](PRD.md) | FR5 |
 | [FMOB-006](features/features.yml) | Notifications for failing CI and review requests | planned | [`PRD.md`](PRD.md) | FR6 |
 | [FMOB-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [FMOB-008](features/features.yml) | Missions in constitution §1 | planned | [`docs/constitution.md`](docs/constitution.md) | §1.1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +89,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | FMOB-005 |
 | FR6 | FMOB-006 |
 | NFR1 | FMOB-007 |
+| §1.1 | FMOB-008 |
 <!-- features:end -->
