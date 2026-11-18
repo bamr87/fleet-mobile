@@ -25,8 +25,20 @@ Mobile front end for the hub console, harness registry and fleet activity log; s
 
 ## Quick start
 
+**Prerequisites:** JDK 17 or newer (CI uses Temurin 17) and a current Gradle on your `PATH`, installed with your package manager or [SDKMAN](https://sdkman.io/). The repo ships no Gradle wrapper and the fleet always tracks the latest release, so no Gradle version is pinned.
+
+Build the shared module and run its tests exactly as CI does:
+
 ```bash
-gradle :shared:jvmTest
+gradle --no-daemon :shared:jvmTest
+```
+
+Success ends with `BUILD SUCCESSFUL`. The HTML test report lands at `shared/build/reports/tests/jvmTest/index.html` and the JUnit XML results in `shared/build/test-results/jvmTest/`.
+
+The tests live in `shared/src/commonTest/kotlin/dev/bamr87/fleet/` and run on the JVM target, the only target so far. To run a single test class:
+
+```bash
+gradle :shared:jvmTest --tests 'dev.bamr87.fleet.FleetStatusTest'
 ```
 
 ## How it grows
